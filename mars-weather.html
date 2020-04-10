@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mars-weather.css">
+</head>
+<body>
+
+<main class="current-weather">
+    <h1 class="main-title">Weather on Elysium Plantitia</h1>
+
+    <div class="date">
+        <h2 class="section-title section-title--date">Sol 377</h2>
+        <p class="date-day">September 10</p>
+    </div>
+
+    <div class="temperature">
+       <h2 class="section-title"></h2>
+        <p class="reading">High: -20C</p>
+        <p class="reading">Low: -120C</p>
+    </div>
+
+    <div class="wind">
+        <h2 class="section-title">Wind</h2>
+        <p class="reading">75 kph</p>
+
+        <div class="wind-direction">
+            <p class="screen-reader">45 deg</p>
+            <div class="wind-arrow"></div>
+        </div>
+    </div>
+
+    <div class="info">
+        <p>InSight's mission is taking daily weather measurements
+        for Mars' plain Elysium Plantitia; the plain is located near the Martian equator.</p>
+        <p>For more info on aforementioned mission, click following link:
+        <a href="https:/mars.nasa.gov/insight/mission/overview/">InSight Overview</a> </p>
+    </div>
+
+    <div class="unit">
+        <label for="celsius">C</label>
+        <input type="radio" id="celsius" name="unit" checked>
+        <button class="unit-toggle"></button>
+<!-- when unit-toggle clicked, checkbox needs to change-->
+        </button>
+        <label for="fahrenheit">F</label>
+        <input type="radio" id="fahrenheit" name="unit">
+    </div>
+    
+
+</main>
+
+<div class="previous-weather">
+    <label for="weather-toggle" class="show-previous-weather-label"> &#8593; <span class="screen-reader">
+        Show previous weather
+    </span></label>
+
+    <input type="checkbox" id="weather-toggle" class="show-previous-weather-toggle">
+
+    <h2 class="main-title">Previous 7 days</h2>
+
+    <div class="previous-days">
+        <div class="day-before">
+            <h3 class="day-before-sol">Sol 371</h3>
+            <p class="day-before-date">September 31</p>
+            <p class="day-before-temp">High: -20 C</p>
+            <p class="day-before-temp">Low: -120 C</p>
+            <button class="day-before-info">More Info</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script></script>
+</body>
+</html>

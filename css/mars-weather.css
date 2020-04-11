@@ -36,7 +36,7 @@ body {
     line-height: 1.6;
     background-image: url("../img/mars.png");
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
     color: var(--clr-light);
 }
@@ -272,12 +272,12 @@ a:hover{
 }
 
 .show-weather.previous-weather span{
-    display: block;
-    transform: translateY(1px) rotate(180deg);
+    /*display: block;*/
+    /*transform: translateY(1px) rotate(180deg);*/
 }
 
 .show-weather span {
-    display: block;
-    transform: rotate(180deg);
+    /*display: block;*/
+    /*transform: rotate(180deg);*/
 }
 

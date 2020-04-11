@@ -14,23 +14,37 @@
     <h1 class="main-title">Weather on Elysium Plantitia</h1>
 
     <div class="date">
-        <h2 class="section-title section-title--date">Sol 377</h2>
-        <p class="date-day">September 10</p>
+        <h2 class="section-title section-title--date">
+            Sol
+            <span data-current-sol></span>
+        </h2>
+        <p class="date-day" data-current-date></p>
     </div>
 
     <div class="temperature">
        <h2 class="section-title">Temperature</h2>
-        <p class="reading">High: -20C</p>
-        <p class="reading">Low: -120C</p>
+        <p class="reading">
+            High:
+            <span data-current-temp-high></span>
+            &deg<span data-temp-unit></span>
+        </p>
+        <p class="reading">
+            Low:
+            <spand data-current-temp-low></spand>
+            &deg<span data-temp-unit></span>
+        </p>
     </div>
 
     <div class="wind">
         <h2 class="section-title">Wind</h2>
-        <p class="reading">75 kph</p>
+        <p class="reading">
+            <span data-wind-speed></span>
+            <span data-speed-unit></span>
+        </p>
 
         <div class="wind-direction">
-            <p class="screen-reader">45 deg</p>
-            <div class="wind-arrow"></div>
+            <p class="screen-reader" data-wind-direction-text>45 deg</p>
+            <div class="wind-arrow" data-wind-direction-arrow></div>
         </div>
     </div>
 
@@ -42,13 +56,13 @@
     </div>
 
     <div class="unit">
-        <label for="celsius">C</label>
-        <input type="radio" id="celsius" name="unit" checked>
-        <button class="unit-toggle"></button>
+        <label for="cel">C</label>
+        <input type="radio" id="cel" name="unit" checked>
+        <button class="unit-toggle" data-unit-toggle></button>
 <!-- when unit-toggle clicked, checkbox needs to change-->
         </button>
-        <label for="fahrenheit">F</label>
-        <input type="radio" id="fahrenheit" name="unit">
+        <label for="fah">F</label>
+        <input type="radio" id="fah" name="unit">
     </div>
     
 
@@ -63,58 +77,26 @@
 
     <h2 class="main-title">Previous 7 days</h2>
 
-    <div class="previous-days">
-        <div class="day-before">
-            <h3 class="day-before-sol">Sol 371</h3>
-            <p class="day-before-date">September 31</p>
-            <p class="day-before-temp">High: -20 C</p>
-            <p class="day-before-temp">Low: -120 C</p>
-            <button class="day-before-info">More Info</button>
-        </div>
-        <div class="day-before">
-            <h3 class="day-before-sol">Sol 371</h3>
-            <p class="day-before-date">September 31</p>
-            <p class="day-before-temp">High: -20 C</p>
-            <p class="day-before-temp">Low: -120 C</p>
-            <button class="day-before-info">More Info</button>
-        </div>
-        <div class="day-before">
-            <h3 class="day-before-sol">Sol 371</h3>
-            <p class="day-before-date">September 31</p>
-            <p class="day-before-temp">High: -20 C</p>
-            <p class="day-before-temp">Low: -120 C</p>
-            <button class="day-before-info">More Info</button>
-        </div>
-        <div class="day-before">
-            <h3 class="day-before-sol">Sol 371</h3>
-            <p class="day-before-date">September 31</p>
-            <p class="day-before-temp">High: -20 C</p>
-            <p class="day-before-temp">Low: -120 C</p>
-            <button class="day-before-info">More Info</button>
-        </div>
-        <div class="day-before">
-            <h3 class="day-before-sol">Sol 371</h3>
-            <p class="day-before-date">September 31</p>
-            <p class="day-before-temp">High: -20 C</p>
-            <p class="day-before-temp">Low: -120 C</p>
-            <button class="day-before-info">More Info</button>
-        </div>
-        <div class="day-before">
-            <h3 class="day-before-sol">Sol 371</h3>
-            <p class="day-before-date">September 31</p>
-            <p class="day-before-temp">High: -20 C</p>
-            <p class="day-before-temp">Low: -120 C</p>
-            <button class="day-before-info">More Info</button>
-        </div>
-        <div class="day-before">
-            <h3 class="day-before-sol">Sol 371</h3>
-            <p class="day-before-date">September 31</p>
-            <p class="day-before-temp">High: -20 C</p>
-            <p class="day-before-temp">Low: -120 C</p>
-            <button class="day-before-info">More Info</button>
-        </div>
-    </div>
+    <div class="previous-days" data-previous-sols></div>
 </div>
+
+<template data-previous-sol-template>
+    <div class="day-before">
+        <h3 class="day-before-sol">
+            Sol<span data-sol></span>
+        </h3>
+        <p class="day-before-date" data-date>
+        </p>
+        <p class="day-before-temp">
+            High:<span data-temp-high></span><span data-temp-unit></span>&deg
+        </p>
+        <p class="day-before-temp">
+            Low:<span data-temp-low></span><span data-temp-unit></span>&deg
+        </p>
+        <button class="day-before-info" data-select-button>More Info</button>
+    </div>
+</template>
+
 
 
 

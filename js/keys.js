@@ -1,1 +1,0 @@
-let marsKey = "uqUTFvrMFwMfDgFPBtBvgKjNR604Dp3gAjfyuPhe";

@@ -48,12 +48,13 @@ a {
 }
 
 a:hover{
-    color: var(--clr-accent-dark);
+    color: var(--clr-gray);
 }
 
 .main-title {
     font-size: var(--fs-h1);
     font-weight: var(--fw-light);
+    font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
     color: var(--clr-accent);
     letter-spacing: 2px;
@@ -64,6 +65,7 @@ a:hover{
 .section-title {
     font-size: var(--fs-h2);
     font-weight: var(--fw-bold);
+    font-family: 'Roboto Thin', serif;
     margin: 0;
 }
 
@@ -127,18 +129,39 @@ a:hover{
     border-radius: 50%;
     height: 7em;
     width: 7em;
-    background-color: rgba(255, 255, 255, .5);
+    /*background-color: rgba(255, 255, 255, .5);*/
     display: grid;
     place-items: center;
     /*short hand for align-items and justify-content*/
     grid-row: 1 / span 2;
     margin-left: -11em;
+    animation: background-color-change 15s ease-in-out infinite;
+}
+@keyframes background-color-change {
+    0% {
+        background: #ec6548;
+    }
+    25% {
+        background: #af4811;
+    }
+    50% {
+        background: #d36f3a;
+    }
+    75% {
+        background: #ce5426;
+    }
+    100% {
+        background: #ec6548;
+    }
 }
 .wind-arrow {
     --direction: 0deg;
     /*direction: ltr;*/
     height: calc(1rem * 3.5);
-    /*height is 3 times larger than width*/
+    border: 1px solid #ec6548;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    filter: blur(3px);
     width: 1rem;
     background: var(--clr-accent-dark);
     clip-path: polygon(50% 0, 0% 100%, 100% 100%);
@@ -247,6 +270,7 @@ a:hover{
 
 .day-before {
     margin-top: -1em;
+    font-family: 'Rokkitt', serif;
 }
 .day-before > * {
     margin: 0;
@@ -285,43 +309,41 @@ a:hover{
 
 
 #spaceinvader {
-    box-shadow: 0 0 0 1em crimson,
-    0 1em 0 1em #F95E5E,
-    -2.5em 1.5em 0 .5em #F65555,
-    2.5em 1.5em 0 .5em #F53131,
-    -3em -3em 0 0 #E81616,
-    3em -3em 0 0 #C40F0F,
-    -2em -2em 0 0 #870505,
-    2em -2em 0 0 #973E0A,
-    -3em -1em 0 0 #AE470C,
-    -2em -1em 0 0 #CB530E,
-    2em -1em 0 0 #EC6314,
-    3em -1em 0 0 #F9772C,
-    -4em 0 0 0 #FA8846,
-    -3em 0 0 0 #F7A575,
-    3em 0 0 0 #ECC133,
-    4em 0 0 0 #DFD471,
-    -5em 1em 0 0 #F9EA5F,
-    -4em 1em 0 0 #FAE631,
-    4em 1em 0 0 #FCE40A,
-    5em 1em 0 0 #ECFC0A,
-    -5em 2em 0 0 #E6FC90,
-    5em 2em 0 0 #E3FC81,
-    -5em 3em 0 0 #D5F651,
-    -3em 3em 0 0 #D1F932,
-    3em 3em 0 0 #CBFC08,
-    5em 3em 0 0 #9FC40A,
-    -2em 4em 0 0 #75C41B,
-    -1em 4em 0 0 #8CDF2D,
-    1em 4em 0 0 #50F755,
-    2em 4em 0 0 #12FF59;
+    box-shadow: 0 0 0 1em #D06D6D,
+    0 1em 0 1em #ec6548,
+    -2.5em 1.5em 0 .5em #D06D6D,
+    2.5em 1.5em 0 .5em #D06D6D,
+    -3em -3em 0 0 #f99569,
+    3em -3em 0 0 #f99569,
+    -2em -2em 0 0 #ec6548,
+    2em -2em 0 0 #ec6548,
+    -3em -1em 0 0 #D06D6D,
+    -2em -1em 0 0 #ec6548,
+    2em -1em 0 0 #ec6548,
+    3em -1em 0 0 #ec6548,
+    -4em 0 0 0 #ec6548,
+    -3em 0 0 0 #ec6548,
+    3em 0 0 0 #ec6548,
+    4em 0 0 0 #ec6548,
+    -5em 1em 0 0 #D06D6D,
+    -4em 1em 0 0 #ec6548,
+    4em 1em 0 0 #ec6548,
+    5em 1em 0 0 #D06D6D,
+    -5em 2em 0 0 #ec6548,
+    5em 2em 0 0 #ec6548,
+    -5em 3em 0 0 #f99569,
+    -3em 3em 0 0 #ec6548,
+    3em 3em 0 0 #ec6548,
+    5em 3em 0 0 #f99569,
+    -2em 4em 0 0 #D06D6D,
+    -1em 4em 0 0 #f99569,
+    1em 4em 0 0 #f99569,
+    2em 4em 0 0 #D06D6D;
     background: transparent;
     width: 1em;
     height: 1em;
     overflow: hidden;
-    /*margin: 50px 0 70px 65px;*/
     margin-left: 90%;
-    /*margin-top: 5%;*/
     animation: slideinvader 15s;
     animation-iteration-count: infinite;
 }

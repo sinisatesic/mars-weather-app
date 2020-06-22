@@ -4,7 +4,11 @@ This is a brief explanation regarding the content within this repo. Herein said 
 for a weather project; the weather is regarding the Elysium Plantitia plain on Mars. The app
 consists of a week's duration of weather with temperature in celsius and fahrenheit (high and low),
 as well as wind-speed (in MPH and KMH), wind-direction, and a link to additional information regarding
-the InSight NASA mission that records aforementioned weather. Furthermore, the wind-direction is indicated
+the InSight NASA mission that records aforementioned weather.
+ 
+ ![image](https://user-images.githubusercontent.com/56378424/85318373-7da77d00-b485-11ea-80d4-2e19277675b0.png)
+ 
+ Furthermore, the wind-direction is indicated
 with a wind-marker that will change direction dynamically depending on which way the wind blows on the
 selected day.
 
@@ -52,6 +56,7 @@ function getWeather() {
 
 The app provides a week of SOLS(days) on Mars, and information for each of the days:
 
+![image](https://user-images.githubusercontent.com/56378424/85318492-b21b3900-b485-11ea-9706-0014a9574733.png)
 ```
 let selectedSolIndex;   //declaring this as global variable; defining in getWeather function
 
